@@ -8,18 +8,26 @@
 </head>
 <body>
     <form name="formulario" action="ejecutar-codigo.php" method="post" id="miformulario">
+        <!--El for y el id es para relacionarlos-->
         <div>
             <label for="mitexto">Usuario</label>
             <input type="text" id="mitexto" placeholder="escribe tu usuario" title="Escribe solo en minúsculas y no más de 15 caracteres" pattern="[a-z]{1,15}">
         </div>
         <div>
             <label for="telefono">Telefono</label>
-            <input type="number" id="telefono" placeholder="Escribe tu numero de tf" min="2" max="30">
+            <input type="number" id="telefono" placeholder="Escribe tu numero de tf" min="2" max="30" maxlength="9">
         </div>
         <div class="login">
             <h2>Login</h2>
             <input type="text" placeholder="Escribe tu nombre" name="nombre" minlength="5" maxlength="40" required>
             <input type="password" name="pass" placeholder="Contraseña" minlength="8" required>
+        </div>
+        <div>
+            <input type="text" placeholder="Su modelo de coche" title="Modelos posibles: A1, A3, A4 Y A5" pattern="A|a(1|3|4|5)">
+        </div>
+        <div>
+            <label for="correo">Email</label>
+            <input type="email" id="correo" placeholder="Escribe tu email" required>
         </div>
             <input type="submit" value="Enviar">
         
